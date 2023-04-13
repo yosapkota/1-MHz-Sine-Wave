@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<wave_config>
+   <wave_state>
+   </wave_state>
+   <db_ref_list>
+      <db_ref path="Main_Driver_behav.wdb" id="1">
+         <top_modules>
+            <top_module name="Main_Driver" />
+            <top_module name="glbl" />
+         </top_modules>
+      </db_ref>
+   </db_ref_list>
+   <zoom_setting>
+      <ZoomStartTime time="2,479,832.250 ns"></ZoomStartTime>
+      <ZoomEndTime time="2,486,088.251 ns"></ZoomEndTime>
+      <Cursor1Time time="2,481,466.250 ns"></Cursor1Time>
+   </zoom_setting>
+   <column_width_setting>
+      <NameColumnWidth column_width="472"></NameColumnWidth>
+      <ValueColumnWidth column_width="188"></ValueColumnWidth>
+   </column_width_setting>
+   <WVObjectSize size="13" />
+   <wave_markers>
+      <marker time="1618998750" label="" />
+      <marker time="1620003750" label="" />
+   </wave_markers>
+   <wvobject fp_name="/Main_Driver/PWM_OUT/pwm_clk" type="logic">
+      <obj_property name="ElementShortName">pwm_clk</obj_property>
+      <obj_property name="ObjectShortName">pwm_clk</obj_property>
+   </wvobject>
+   <wvobject fp_name="/Main_Driver/PWM_OUT/PWM_Hi_Output" type="logic">
+      <obj_property name="ElementShortName">PWM_Hi_Output</obj_property>
+      <obj_property name="ObjectShortName">PWM_Hi_Output</obj_property>
+   </wvobject>
+   <wvobject fp_name="/Main_Driver/PWM_OUT/sine_out" type="array">
+      <obj_property name="ElementShortName">sine_out[7:0]</obj_property>
+      <obj_property name="ObjectShortName">sine_out[7:0]</obj_property>
+      <obj_property name="WaveformStyle">STYLE_ANALOG</obj_property>
+      <obj_property name="CellHeight">100</obj_property>
+      <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
+   </wvobject>
+   <wvobject fp_name="/Main_Driver/PWM_OUT/sine_v_phase" type="array">
+      <obj_property name="ElementShortName">sine_v_phase[7:0]</obj_property>
+      <obj_property name="ObjectShortName">sine_v_phase[7:0]</obj_property>
+      <obj_property name="WaveformStyle">STYLE_ANALOG</obj_property>
+      <obj_property name="CellHeight">100</obj_property>
+      <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
+   </wvobject>
+   <wvobject fp_name="/Main_Driver/PWM_OUT/sine_w_phase" type="array">
+      <obj_property name="ElementShortName">sine_w_phase[7:0]</obj_property>
+      <obj_property name="ObjectShortName">sine_w_phase[7:0]</obj_property>
+      <obj_property name="WaveformStyle">STYLE_ANALOG</obj_property>
+      <obj_property name="CellHeight">100</obj_property>
+      <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
+   </wvobject>
+   <wvobject fp_name="/Main_Driver/PWM_OUT/count" type="array">
+      <obj_property name="ElementShortName">count[7:0]</obj_property>
+      <obj_property name="ObjectShortName">count[7:0]</obj_property>
+      <obj_property name="WaveformStyle">STYLE_ANALOG</obj_property>
+      <obj_property name="CellHeight">100</obj_property>
+      <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
+   </wvobject>
+   <wvobject fp_name="/Main_Driver/PWM_OUT/up" type="logic">
+      <obj_property name="ElementShortName">up</obj_property>
+      <obj_property name="ObjectShortName">up</obj_property>
+   </wvobject>
+   <wvobject fp_name="/Main_Driver/PWM_U_High_Out" type="logic">
+      <obj_property name="ElementShortName">PWM_U_High_Out</obj_property>
+      <obj_property name="ObjectShortName">PWM_U_High_Out</obj_property>
+   </wvobject>
+   <wvobject fp_name="/Main_Driver/PWM_V_High_Out" type="logic">
+      <obj_property name="ElementShortName">PWM_V_High_Out</obj_property>
+      <obj_property name="ObjectShortName">PWM_V_High_Out</obj_property>
+   </wvobject>
+   <wvobject fp_name="/Main_Driver/PWM_W_High_Out" type="logic">
+      <obj_property name="ElementShortName">PWM_W_High_Out</obj_property>
+      <obj_property name="ObjectShortName">PWM_W_High_Out</obj_property>
+   </wvobject>
+   <wvobject fp_name="/Main_Driver/PWM_OUT/sine_u_idx" type="array">
+      <obj_property name="ElementShortName">sine_u_idx[7:0]</obj_property>
+      <obj_property name="ObjectShortName">sine_u_idx[7:0]</obj_property>
+      <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
+   </wvobject>
+   <wvobject fp_name="/Main_Driver/PWM_OUT/sine_v_idx" type="array">
+      <obj_property name="ElementShortName">sine_v_idx[7:0]</obj_property>
+      <obj_property name="ObjectShortName">sine_v_idx[7:0]</obj_property>
+      <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
+   </wvobject>
+   <wvobject fp_name="/Main_Driver/PWM_OUT/sine_w_idx" type="array">
+      <obj_property name="ElementShortName">sine_w_idx[7:0]</obj_property>
+      <obj_property name="ObjectShortName">sine_w_idx[7:0]</obj_property>
+      <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
+   </wvobject>
+</wave_config>

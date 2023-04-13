@@ -1,0 +1,13 @@
+#-----------------------------------------------------------
+# Vivado v2022.2.1 (64-bit)
+# SW Build 3719031 on Thu Dec  8 18:35:04 MST 2022
+# IP Build 3718410 on Thu Dec  8 22:11:41 MST 2022
+# Start of session at: Wed Apr 12 12:17:28 2023
+# Process ID: 28196
+# Current directory: C:/Users/ysapkota/Downloads/DDS_SineWave/DDS_SineWave/DDS_SineWave.runs/clk_wiz_0_synth_1
+# Command line: vivado.exe -log clk_wiz_0.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source clk_wiz_0.tcl
+# Log file: C:/Users/ysapkota/Downloads/DDS_SineWave/DDS_SineWave/DDS_SineWave.runs/clk_wiz_0_synth_1/clk_wiz_0.vds
+# Journal file: C:/Users/ysapkota/Downloads/DDS_SineWave/DDS_SineWave/DDS_SineWave.runs/clk_wiz_0_synth_1\vivado.jou
+# Running On: TS21590, OS: Windows, CPU Frequency: 2095 MHz, CPU Physical cores: 8, Host memory: 68350 MB
+#-----------------------------------------------------------
+source clk_wiz_0.tcl -notrace

@@ -1,0 +1,8 @@
++====================+====================+=====================================+
+| Launch Setup Clock | Launch Hold Clock  | Pin                                 |
++====================+====================+=====================================+
+| clk_out1_clk_wiz_0 | clk_out1_clk_wiz_0 | PWM_OUT/phase_accumulator_reg[29]/D |
+| clk_out1_clk_wiz_0 | clk_out1_clk_wiz_0 | PWM_OUT/phase_accumulator_reg[28]/D |
+| clk_out1_clk_wiz_0 | clk_out1_clk_wiz_0 | PWM_OUT/phase_accumulator_reg[25]/D |
+| clk_out1_clk_wiz_0 | clk_out1_clk_wiz_0 | PWM_OUT/phase_accumulator_reg[24]/D |
++--------------------+--------------------+-------------------------------------+

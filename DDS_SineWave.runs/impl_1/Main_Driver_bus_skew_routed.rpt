@@ -1,0 +1,15 @@
+Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
+------------------------------------------------------------------------------------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2022.2.1 (win64) Build 3719031 Thu Dec  8 18:35:04 MST 2022
+| Date         : Wed Apr 12 17:28:25 2023
+| Host         : TS21590 running 64-bit major release  (build 9200)
+| Command      : report_bus_skew -warn_on_violation -file Main_Driver_bus_skew_routed.rpt -pb Main_Driver_bus_skew_routed.pb -rpx Main_Driver_bus_skew_routed.rpx
+| Design       : Main_Driver
+| Device       : 7a35t-csg324
+| Speed File   : -1  PRODUCTION 1.23 2018-06-13
+------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+Bus Skew Report
+
+No bus skew constraints
+
