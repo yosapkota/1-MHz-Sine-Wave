@@ -293,8 +293,8 @@ const int NumRelocateId= 233;
 void relocate(char *dp)
 {
 	iki_relocate(dp, "xsim.dir/Main_Driver_behav/xsim.reloc",  (void **)funcTab, 233);
-	iki_vhdl_file_variable_register(dp + 122696);
-	iki_vhdl_file_variable_register(dp + 122752);
+	iki_vhdl_file_variable_register(dp + 123464);
+	iki_vhdl_file_variable_register(dp + 123520);
 
 
 	/*Populate the transaction function pointer field in the whole net structure */
@@ -310,7 +310,7 @@ void simulate(char *dp)
 		iki_schedule_processes_at_time_zero(dp, "xsim.dir/Main_Driver_behav/xsim.reloc");
 	// Initialize Verilog nets in mixed simulation, for the cases when the value at time 0 should be propagated from the mixed language Vhdl net
 
-	iki_vlog_schedule_transaction_signal_fast_vhdl_value_time_0(dp + 128200, dp + 130512, 0, 0, 0, 0, 1, 1);
+	iki_vlog_schedule_transaction_signal_fast_vhdl_value_time_0(dp + 128968, dp + 131280, 0, 0, 0, 0, 1, 1);
 	iki_execute_processes();
 
 	// Schedule resolution functions for the multiply driven Verilog nets that have strength

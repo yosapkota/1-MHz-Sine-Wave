@@ -89,10 +89,13 @@ PWM_OUT : DDS_SineWave port map(
 );
 
 JD1(1) <= PWM_Hi_Out;
+JD1(2) <= PWM_V_High_Out;
+JD1(3) <= PWM_W_High_Out;
+
 JD2(7) <= PWM_lo_Out;
 
 clk_sw <= clk_400MHZ and sw(0);
-JD1(2) <= clk;
+-- JD1(2) <= clk;
 
 
 end Behavioral;

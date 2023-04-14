@@ -54,7 +54,18 @@ architecture Behavioral of DDS_SineWave is
     x"4f",x"52",x"55",x"58",x"5a",x"5d",x"61",x"64",
     x"67",x"6a",x"6d",x"70",x"73",x"76",x"79",x"7c"
   );
+  
+    -- index update for three phase sine wave
+  
+  signal sine_u_idx : unsigned(7 downto 0) := (others => '0');
+  signal sine_v_idx : unsigned(7 downto 0) := x"55";
+  signal sine_w_idx : unsigned(7 downto 0) := x"AA";
+  
+  -- phase accumulator for three phases
   signal phase_accumulator : unsigned(31 downto 0) := (others => '0');
+  signal phase_U_accumulator : unsigned(31 downto 0) := (others => '0');
+  signal phase_V_accumulator : unsigned(31 downto 0) := x"4CCCCCB0";
+  signal phase_W_accumulator : unsigned(31 downto 0) := x"99999960";
   
   ------------------------------------------------------------
   -- f_out = (f_clk * phase_increment)/2^no_of_bits_phase_accum
@@ -86,11 +97,6 @@ architecture Behavioral of DDS_SineWave is
   signal PWM_V_High_Tmp : std_logic := '0';
   signal PWM_W_High_Tmp : std_logic := '0';
   
-  -- index update for three phase sine wave
-  
-  signal sine_u_idx : unsigned(7 downto 0) := (others => '0');
-  signal sine_v_idx : unsigned(7 downto 0) := x"55";
-  signal sine_w_idx : unsigned(7 downto 0) := x"AA";
   
   --- Dead Time inclusion---
   constant n : positive := 100; -- 1 us DT with n = 100 for 100 MHz
@@ -113,22 +119,38 @@ begin
       phase_accumulator <= (others => '0');
       phase_increment  <= (others => '0');
       sine_idx <= (others => '0');
+      
+      phase_U_accumulator <= (others => '0');
+      --phase_V_accumulator <= x"00000055";
+      --phase_W_accumulator <= x"000000AA";
+      
+      sine_u_idx <= (others => '0');
+      sine_v_idx <= x"55";
+      sine_w_idx <= x"AA";
+      
     elsif rising_edge(pwm_clk) then
+    
       phase_accumulator <= phase_accumulator + phase_increment;
+      
+      phase_U_accumulator <= phase_U_accumulator + phase_increment;
+      phase_V_accumulator <= phase_V_accumulator + phase_increment;
+      phase_W_accumulator <= phase_W_accumulator + phase_increment;
+      
       sine_idx <= phase_accumulator(31 downto 24);
+      
       sine_u_idx <= phase_accumulator(31 downto 24);
       
-      if(sine_v_idx > x"FF") then
-            sine_v_idx <= (others => '0');
-      else 
-            sine_v_idx <= phase_accumulator(31 downto 24) + sine_v_idx;
-      end if;
+      -- if(sine_v_idx > x"FF") then
+      --      sine_v_idx <= (others => '0');
+      -- else 
+            sine_v_idx <= phase_V_accumulator(31 downto 24);
+      -- end if;
       
-       if(sine_w_idx > x"FF") then
-            sine_w_idx <= (others => '0');
-      else 
-            sine_w_idx <= phase_accumulator(31 downto 24) + sine_w_idx;
-      end if;   
+      -- if(sine_w_idx > x"FF") then
+      --      sine_w_idx <= (others => '0');
+      -- else 
+            sine_w_idx <= phase_W_accumulator(31 downto 24);
+      -- end if;   
     end if;
   end process;
   
@@ -172,7 +194,7 @@ begin
   begin
   
   if(rising_edge(pwm_clk)) then
-    if(sine_value_store > unsigned(count)) then
+    if(sine_u_phase > unsigned(count)) then
         PWM_High_tmp <= '1';
     else
         PWM_High_tmp <= '0';

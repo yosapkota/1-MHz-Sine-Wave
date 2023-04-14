@@ -1,7 +1,7 @@
 Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
 ----------------------------------------------------------------------------------------
 | Tool Version : Vivado v.2022.2.1 (win64) Build 3719031 Thu Dec  8 18:35:04 MST 2022
-| Date         : Wed Apr 12 17:27:41 2023
+| Date         : Fri Apr 14 12:21:40 2023
 | Host         : TS21590 running 64-bit major release  (build 9200)
 | Command      : report_control_sets -verbose -file Main_Driver_control_sets_placed.rpt
 | Design       : Main_Driver
@@ -58,7 +58,7 @@ Table of Contents
 +--------------+-----------------------+------------------------+-----------------+--------------+
 | Clock Enable | Synchronous Set/Reset | Asynchronous Set/Reset | Total Registers | Total Slices |
 +--------------+-----------------------+------------------------+-----------------+--------------+
-| No           | No                    | No                     |              50 |           17 |
+| No           | No                    | No                     |             130 |           47 |
 | No           | No                    | Yes                    |               0 |            0 |
 | No           | Yes                   | No                     |               0 |            0 |
 | Yes          | No                    | No                     |               0 |            0 |
@@ -73,7 +73,7 @@ Table of Contents
 +-----------------------------+---------------+------------------+------------------+----------------+--------------+
 |         Clock Signal        | Enable Signal | Set/Reset Signal | Slice Load Count | Bel Load Count | Bels / Slice |
 +-----------------------------+---------------+------------------+------------------+----------------+--------------+
-|  CLK_PORT_MAP/inst/clk_out1 |               |                  |               17 |             50 |         2.94 |
+|  CLK_PORT_MAP/inst/clk_out1 |               |                  |               47 |            130 |         2.77 |
 +-----------------------------+---------------+------------------+------------------+----------------+--------------+
 
 

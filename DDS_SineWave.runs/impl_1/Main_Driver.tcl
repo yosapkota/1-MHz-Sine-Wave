@@ -115,7 +115,8 @@ proc step_failed { step } {
 OPTRACE "impl_1" END { }
 }
 
-set_msg_config -id {Common 17-41} -limit 10000000
+set_msg_config -id {Synth 8-256} -limit 10000
+set_msg_config -id {Synth 8-638} -limit 10000
 
 OPTRACE "impl_1" START { ROLLUP_1 }
 OPTRACE "Phase: Init Design" START { ROLLUP_AUTO }
@@ -123,6 +124,7 @@ start_step init_design
 set ACTIVE_STEP init_design
 set rc [catch {
   create_msg_db init_design.pb
+  set_param checkpoint.writeSynthRtdsInDcp 1
   set_param chipscope.maxJobs 1
   set_param xicom.use_bs_reader 1
 OPTRACE "create in-memory project" START { }
@@ -139,7 +141,7 @@ OPTRACE "set parameters" START { }
 OPTRACE "set parameters" END { }
 OPTRACE "add files" START { }
   add_files -quiet C:/Users/ysapkota/Downloads/DDS_SineWave/DDS_SineWave/DDS_SineWave.runs/synth_1/Main_Driver.dcp
-  read_ip -quiet c:/Users/ysapkota/Downloads/DDS_SineWave/DDS_SineWave/DDS_SineWave.srcs/sources_1/ip/clk_wiz_0/clk_wiz_0.xci
+  read_ip -quiet C:/Users/ysapkota/Downloads/DDS_SineWave/DDS_SineWave/DDS_SineWave.srcs/sources_1/ip/clk_wiz_0/clk_wiz_0.xci
 OPTRACE "read constraints: implementation" START { }
   read_xdc C:/Users/ysapkota/Downloads/DDS_SineWave/DDS_SineWave/DDS_SineWave.srcs/constrs_1/new/Arty_Master.xdc
 OPTRACE "read constraints: implementation" END { }

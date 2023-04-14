@@ -2,8 +2,8 @@
 # Vivado v2022.2.1 (64-bit)
 # SW Build 3719031 on Thu Dec  8 18:35:04 MST 2022
 # IP Build 3718410 on Thu Dec  8 22:11:41 MST 2022
-# Start of session at: Wed Apr 12 17:26:10 2023
-# Process ID: 6884
+# Start of session at: Fri Apr 14 12:19:55 2023
+# Process ID: 29936
 # Current directory: C:/Users/ysapkota/Downloads/DDS_SineWave/DDS_SineWave/DDS_SineWave.runs/impl_1
 # Command line: vivado.exe -log Main_Driver.vdi -applog -product Vivado -messageDb vivado.pb -mode batch -source Main_Driver.tcl -notrace
 # Log file: C:/Users/ysapkota/Downloads/DDS_SineWave/DDS_SineWave/DDS_SineWave.runs/impl_1/Main_Driver.vdi

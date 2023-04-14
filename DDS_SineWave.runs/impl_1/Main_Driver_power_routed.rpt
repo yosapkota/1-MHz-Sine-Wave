@@ -1,7 +1,7 @@
 Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
 -------------------------------------------------------------------------------------------------------------------------------------------------------
 | Tool Version     : Vivado v.2022.2.1 (win64) Build 3719031 Thu Dec  8 18:35:04 MST 2022
-| Date             : Wed Apr 12 17:28:25 2023
+| Date             : Fri Apr 14 12:22:32 2023
 | Host             : TS21590 running 64-bit major release  (build 9200)
 | Command          : report_power -file Main_Driver_power_routed.rpt -pb Main_Driver_power_summary_routed.pb -rpx Main_Driver_power_routed.rpx
 | Design           : Main_Driver
@@ -30,14 +30,14 @@ Table of Contents
 ----------
 
 +--------------------------+--------------+
-| Total On-Chip Power (W)  | 0.235        |
+| Total On-Chip Power (W)  | 0.259        |
 | Design Power Budget (W)  | Unspecified* |
 | Power Budget Margin (W)  | NA           |
-| Dynamic (W)              | 0.163        |
+| Dynamic (W)              | 0.187        |
 | Device Static (W)        | 0.072        |
 | Effective TJA (C/W)      | 4.8          |
-| Max Ambient (C)          | 83.9         |
-| Junction Temperature (C) | 26.1         |
+| Max Ambient (C)          | 83.8         |
+| Junction Temperature (C) | 26.2         |
 | Confidence Level         | Medium       |
 | Setting File             | ---          |
 | Simulation Activity File | ---          |
@@ -52,18 +52,18 @@ Table of Contents
 +----------------+-----------+----------+-----------+-----------------+
 | On-Chip        | Power (W) | Used     | Available | Utilization (%) |
 +----------------+-----------+----------+-----------+-----------------+
-| Clocks         |     0.004 |        6 |       --- |             --- |
-| Slice Logic    |     0.003 |      147 |       --- |             --- |
-|   LUT as Logic |     0.002 |       56 |     20800 |            0.27 |
-|   CARRY4       |    <0.001 |       11 |      8150 |            0.13 |
-|   Register     |    <0.001 |       50 |     41600 |            0.12 |
-|   F7/F8 Muxes  |    <0.001 |       18 |     32600 |            0.06 |
+| Clocks         |     0.009 |        8 |       --- |             --- |
+| Slice Logic    |     0.008 |      382 |       --- |             --- |
+|   LUT as Logic |     0.007 |      148 |     20800 |            0.71 |
+|   CARRY4       |    <0.001 |       29 |      8150 |            0.36 |
+|   Register     |    <0.001 |      131 |     41600 |            0.31 |
+|   F7/F8 Muxes  |    <0.001 |       54 |     32600 |            0.17 |
 |   Others       |     0.000 |        7 |       --- |             --- |
-| Signals        |     0.003 |       79 |       --- |             --- |
+| Signals        |     0.007 |      191 |       --- |             --- |
 | PLL            |     0.122 |        1 |         5 |           20.00 |
-| I/O            |     0.032 |       21 |       210 |           10.00 |
+| I/O            |     0.040 |       21 |       210 |           10.00 |
 | Static Power   |     0.072 |          |           |                 |
-| Total          |     0.235 |          |           |                 |
+| Total          |     0.259 |          |           |                 |
 +----------------+-----------+----------+-----------+-----------------+
 
 
@@ -73,9 +73,9 @@ Table of Contents
 +-----------+-------------+-----------+-------------+------------+-------------+-------------+------------+
 | Source    | Voltage (V) | Total (A) | Dynamic (A) | Static (A) | Powerup (A) | Budget (A)  | Margin (A) |
 +-----------+-------------+-----------+-------------+------------+-------------+-------------+------------+
-| Vccint    |       1.000 |     0.032 |       0.023 |      0.010 |       NA    | Unspecified | NA         |
+| Vccint    |       1.000 |     0.048 |       0.038 |      0.010 |       NA    | Unspecified | NA         |
 | Vccaux    |       1.800 |     0.074 |       0.062 |      0.013 |       NA    | Unspecified | NA         |
-| Vcco33    |       3.300 |     0.010 |       0.009 |      0.001 |       NA    | Unspecified | NA         |
+| Vcco33    |       3.300 |     0.012 |       0.011 |      0.001 |       NA    | Unspecified | NA         |
 | Vcco25    |       2.500 |     0.000 |       0.000 |      0.000 |       NA    | Unspecified | NA         |
 | Vcco18    |       1.800 |     0.000 |       0.000 |      0.000 |       NA    | Unspecified | NA         |
 | Vcco15    |       1.500 |     0.000 |       0.000 |      0.000 |       NA    | Unspecified | NA         |
@@ -126,14 +126,16 @@ Table of Contents
 2.2 Clock Constraints
 ---------------------
 
-+--------------------+--------------------------------------+-----------------+
-| Clock              | Domain                               | Constraint (ns) |
-+--------------------+--------------------------------------+-----------------+
-| clk_out1_clk_wiz_0 | CLK_PORT_MAP/inst/clk_out1_clk_wiz_0 |             2.5 |
-| clkfbout_clk_wiz_0 | CLK_PORT_MAP/inst/clkfbout_clk_wiz_0 |            10.0 |
-| sys_clk_pin        | CLK                                  |            10.0 |
-| sys_clk_pin        | CLK_IBUF                             |            10.0 |
-+--------------------+--------------------------------------+-----------------+
++----------------------+--------------------------------------+-----------------+
+| Clock                | Domain                               | Constraint (ns) |
++----------------------+--------------------------------------+-----------------+
+| CLK                  | CLK                                  |            10.0 |
+| clk_out1_clk_wiz_0   | CLK_PORT_MAP/inst/clk_out1_clk_wiz_0 |             2.5 |
+| clk_out1_clk_wiz_0_1 | CLK_PORT_MAP/inst/clk_out1_clk_wiz_0 |             2.5 |
+| clkfbout_clk_wiz_0   | CLK_PORT_MAP/inst/clkfbout_clk_wiz_0 |            10.0 |
+| clkfbout_clk_wiz_0_1 | CLK_PORT_MAP/inst/clkfbout_clk_wiz_0 |            10.0 |
+| sys_clk_pin          | CLK                                  |            10.0 |
++----------------------+--------------------------------------+-----------------+
 
 
 3. Detailed Reports
@@ -145,10 +147,10 @@ Table of Contents
 +----------------+-----------+
 | Name           | Power (W) |
 +----------------+-----------+
-| Main_Driver    |     0.163 |
+| Main_Driver    |     0.187 |
 |   CLK_PORT_MAP |     0.123 |
 |     inst       |     0.123 |
-|   PWM_OUT      |     0.008 |
+|   PWM_OUT      |     0.024 |
 +----------------+-----------+
 
 
